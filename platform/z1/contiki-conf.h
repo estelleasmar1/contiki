@@ -112,6 +112,10 @@
 
 #define CFS_CONF_OFFSET_TYPE  long
 
+#ifndef STARTUP_CONF_VERBOSE
+#define STARTUP_CONF_VERBOSE        0 /**< Set to 0 to boot without verbosity */
+#endif
+
 #define PROFILE_CONF_ON 0
 #define ENERGEST_CONF_ON 1
 
