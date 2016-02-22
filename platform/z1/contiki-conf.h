@@ -113,7 +113,11 @@
 #define CFS_CONF_OFFSET_TYPE  long
 
 #ifndef STARTUP_CONF_VERBOSE
-#define STARTUP_CONF_VERBOSE        0 /**< Set to 0 to boot without verbosity */
+#define STARTUP_CONF_VERBOSE          1 /**< Set to 0 for a headless boot */
+#endif
+
+#if !STARTUP_CONF_VERBOSE
+#define PROCESS_CONF_NO_PROCESS_NAMES 1 /**< Squeezes some bytes in RAM */
 #endif
 
 #define PROFILE_CONF_ON 0
